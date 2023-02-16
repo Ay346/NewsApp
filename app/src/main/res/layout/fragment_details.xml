@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsForItem">
+
+
+    <ImageView
+        android:id="@+id/newsImage"
+        style="@style/NewsArticle.Image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_size"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/news_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/tools_placeholder" />
+
+    <TextView
+        android:id="@+id/newsAuthor"
+        style="@style/NewsArticle.Author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/newsImage"
+        app:layout_constraintEnd_toEndOf="@id/newsImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="ABC News" />
+
+     <TextView
+        android:id="@+id/newsTitle"
+        style="@style/NewsArticle.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minLines="3"
+        app:layout_constraintTop_toBottomOf="@id/newsImage"
+        tools:text="Elon Musk says Tesla can't yet launch in India" />
+
+    <TextView
+        android:id="@+id/newsPublishedAt"
+        style="@style/NewsArticle.PublishedAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newsTitle"
+        android:layout_margin="10dp"
+        android:layout_marginStart="@dimen/normal_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/newsTitle"
+        tools:text="@string/str_test_date" />
+
+
+    <TextView
+        android:id="@+id/newsDescrption"
+        style="@style/NewsArticle.PublishedAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newsTitle"
+        android:layout_margin="10dp"
+        android:layout_marginStart="@dimen/normal_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:gravity="center"
+        android:minLines="3"
+        app:layout_constraintTop_toBottomOf="@id/newsPublishedAt"
+        tools:text="descrption" />
+
+    <TextView
+        android:id="@+id/newsContent"
+        style="@style/NewsArticle.PublishedAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newsTitle"
+        android:layout_margin="10dp"
+        android:layout_marginStart="@dimen/normal_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/newsDescrption"
+        tools:text="descrption" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
